@@ -70,7 +70,13 @@ body {
     line-height: 150%;
   }
 
+
+
+
+
   /*Navbar*/
+
+  /*Navbar geral*/
   nav {
     display: flex;
     justify-content: space-between;
@@ -83,8 +89,34 @@ body {
   }
 
   .navLeft {
-    flex: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
   }
+  
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+.hamburger-menu img{
+  width: 48px;
+  height: 48px;
+}
+
+.menu-toggle {
+  display: none; /* Navbar Hidden checkbox hamburguer */
+}
+
 
   .navLogo {
     flex: 1;
@@ -119,9 +151,66 @@ body {
   }
 
   nav ul li a:hover {
-    color: #9a341c; /* Change text color on hover */
+    color: #9a341c;
   }
 
+   /* Navbar Responsive styles */
+
+ @media (max-width: 1024px) {
+  
+  .hamburger-menu {
+    display: block;
+    margin-right: 240px;
+  }
+
+  .navLeft {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: #f7f6f2;
+    width: 100%;
+    height: 200px;
+    text-align: left;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+  .menu-toggle:checked + .hamburger-menu + .nav-links {
+    display: flex;
+  }
+
+  .navLeft a {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hamburger-menu {
+    margin-right: 60px;
+  }
+
+  .navLeft {
+    width: 100%;
+  }
+
+  .navLeft li {
+    margin: 0;
+  }
+
+  .navLogo img {
+    width: 48px;
+  }
+
+  .navRight {
+    margin-left: 60px;
+  }
+}
+
+ 
   /* padding */
   .padding {
     height: 120px;
@@ -132,7 +221,7 @@ body {
     display: flex;
     align-items: end;
     justify-content: center;
-    height: 800px;
+    height: 600px;
     width: 100%;
     background-image: url("hero.png");
     background-size: 100%;
@@ -140,10 +229,64 @@ body {
     background-repeat: no-repeat;
   }
 
+  .herosection h1{
+    padding-top: 600px;
+    padding-bottom: 16px;
+  }
+  
+  @media (max-width: 1440px) {
+    .herosection{
+      height: 800px;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .herosection{
+      height: 600px;
+      width: auto;
+    }
+
+    .herosection h1{
+      padding-top: 400px;
+      padding-bottom: 80px;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .herosection{
+      height: 450px;
+      width: auto;
+    }
+
+    .herosection h1{
+      font-size: 64px;
+      padding-top: 300px;
+      padding-bottom: 40px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .herosection{
+      height: 300px;
+      width: 100%;
+    }
+
+    .herosection h1{
+      font-size: 48px;
+      padding-top: 200px;
+      padding-bottom: 24px;
+    }
+
+  }
+
   /* filtro loja landing */
   .filtroloja {
     display: flex;
     justify-content: center;
+    padding-bottom: 64px;
   }
 
   .filtroloja ul {
@@ -154,7 +297,8 @@ body {
     height: 60px;
     align-items: center;
     padding-top: 120px;
-    padding-bottom: 64px;
+    padding-bottom: 0px;
+    flex-direction: row;
 
   }
 
@@ -172,6 +316,29 @@ body {
     color: #f0a491;
   }
 
+  @media (max-width: 768px) {
+
+    .filtroloja{
+      padding-bottom: 48px;
+    }
+
+    .filtroloja ul{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    }
+
+    .filtroloja ul li h3{
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+  
+    .filtroloja ul li h3{
+      font-size: 32px;
+    }
+  }
 
   /* card loja */
 
@@ -268,6 +435,56 @@ body {
   }
 
 
+  @media (max-width: 1024px) {
+
+    .card-container{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      margin-left: 120px;
+      margin-right: 120px;
+    }
+
+    .card {
+      width: calc(100%);
+      border: 2px solid #e43c13;
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    
+    }
+   
+  }
+
+  @media (max-width: 768px) {
+
+    .card-container{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    .card {
+      width: calc(100%);
+      border: 2px solid #e43c13;
+      padding: 16px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+   
+  }
+
+
+
+
   /* secção texto e imagem */
   .textimage-container {
     display: flex;
@@ -305,6 +522,37 @@ body {
     object-fit: cover;
   }
 
+  @media (max-width: 1024px) {
+
+    .textimage-container{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    .landing-text h4 {
+      padding-bottom: 40px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+    .textimage-container{
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    .landing-text h2 {
+      font-size: 48px;
+    }
+
+    .landing-text h4 {
+      font-size: 24px;
+      padding-bottom: 40px;
+    }
+  }
 
   /* secção menu produtos */
   .menuprodutos {
@@ -344,6 +592,17 @@ body {
     height: 100%;
     object-fit: contain;
   } 
+
+  @media (max-width: 768px) {
+
+    .nomeproduto h3 {
+      font-size: 24px;
+    }
+
+    .linha{
+      height: 80px;
+    }
+  }
 
   
   /* secção footer */
@@ -393,6 +652,65 @@ body {
 
   .footer-bottom-2 ul li {
     text-align: right;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .footer h2 {
+      font-size: 32px;
+    }
+
+    .footer img {
+      display: block;
+      margin: 0 auto;
+      width: 88px;
+      padding-bottom: 120px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+
+    .footer-bottom ul{
+      padding-bottom: 40px;
+      width: 360px;
+    }
+
+    .footer-bottom ul li {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .footer-bottom-2{
+      width: 360px;
+      margin-right: 0;
+    }
+
+    .footer-bottom-2 ul li {
+      font-size: 16px;
+      text-align: left;
+    }
+
+  }
+
+  @media (max-width: 1024px) {
+
+    .footer-bottom ul{
+      padding-bottom: 40px;
+      width: 360px;
+    }
+
+    .footer-bottom ul li {
+      font-size: 16px;
+    }
+
+    .footer-bottom-2 ul li {
+      font-size: 16px;
+    }
+
   }
 
   /* sobe nós texto */
