@@ -113,9 +113,73 @@ body {
   height: 48px;
 }
 
-.menu-toggle {
-  display: none; /* Navbar Hidden checkbox hamburguer */
+
+
+
+
+
+/* Overlay menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f7f6f2;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+.overlay-content {
+  display: none;
+  color: #e43c13;
+}
+
+.overlay-content a {
+  color: #e43c13;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.overlay-content a:hover {
+  color: #9a341c;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: #e43c13;
+  text-decoration: none;
+}
+
+/* Open overlay on :target */
+:target {
+  width: 100%;
+}
+
+:target .overlay {
+  width: 100%;
+}
+
+:target .overlay-content {
+  display: block;
+}
+
+
+
+
+
 
 
   .navLogo {

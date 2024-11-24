@@ -35,28 +35,44 @@
   </head>
   <body>
 
-  <!-- Navbar -->
-    <nav>
-      <div>
+ <!-- Navbar -->
+ <nav>
+  <div>
+    <!-- Hamburger icon to open overlay -->
+    <a href="#overlay-menu" class="hamburger-menu">
+      <img src="hamburguer.png" alt="hamburger icon">
+    </a>
 
-  <label class="hamburger-menu">
-    <img src="hamburguer.png" alt="hamburguer icon.png">
-  </label>
-  
-        <ul class="navLeft">
-          <li><a href="Loja.html">Loja</a></li>
-          <li><a href="SobreNos.html">Sobre nós</a></li>
-          <li><a href="Contacto.html">Contacto</a></li>
-        </ul>
-      </div>
+    <ul class="navLeft">
+      <li><a href="Loja.html">Loja</a></li>
+      <li><a href="SobreNos.html">Sobre nós</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+  </div>
 
-      <div class="navLogo"> <a href="index.html">
-        <img src="logo.png" alt="logolevedura.png" width="60px" /></a>
-        </div>
+  <div class="navLogo">
+    <a href="index.html">
+      <img src="logo.png" alt="logo" width="60px" />
+    </a>
+  </div>
 
-      <div class="navRight"><img src="carrinho.png" alt="carrinho.png" width="48px"/></div>
-    </nav>
-  <!-- Navbar  end-->
+  <div class="navRight">
+    <img src="carrinho.png" alt="shopping cart" width="48px" />
+  </div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Overlay menu -->
+<div id="overlay-menu" class="overlay">
+  <a href="#" class="closebtn">&times;</a>
+  <div class="overlay-content">
+    <a href="Loja.html">Loja</a>
+    <a href="SobreNos.html">Sobre nós</a>
+    <a href="Contacto.html">Contacto</a>
+  </div>
+</div>
+</body>
+</html>
 
 
   <!-- Hero image -->
