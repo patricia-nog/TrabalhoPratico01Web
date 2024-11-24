@@ -116,9 +116,10 @@ body {
 
 
 
-
-
-/* Overlay menu */
+/* Overlay menu. Como não estava a conseguir pôr o menu
+ a funcionar em mobile, copiei este código de overlay 
+ do chat gpt para se conseguir utilizar o menu */
+/* Código Overlay inicio */
 .overlay {
   position: fixed;
   top: 0;
@@ -158,7 +159,7 @@ body {
   position: absolute;
   top: 20px;
   right: 40px;
-  font-size: 40px;
+  font-size: 48px;
   color: #e43c13;
   text-decoration: none;
 }
@@ -175,8 +176,7 @@ body {
 :target .overlay-content {
   display: block;
 }
-
-
+/* Código Overlay fim */
 
 
 
@@ -665,7 +665,7 @@ body {
     }
 
     .landing-text h4 {
-      font-size: 24px;
+      font-size: 20px;
       padding-bottom: 40px;
     }
 
@@ -850,6 +850,7 @@ body {
     padding-bottom: 40px;
     align-items: center;
     text-align: center;
+    
   }
 
   .sobretext h2 {
@@ -887,12 +888,18 @@ body {
       padding: 0px;
       margin-left: 16px;
       margin-right: 16px;
-      padding-bottom: 64px;
+      padding-top: 0;
+    padding-bottom: 0;
     }
 
     .sobretext h2 {
       font-size: 32px;
     }
+
+    .sobreimg {
+      padding-bottom: 64px;
+    }
+
 }
 
   /* sobe nós imagem */
